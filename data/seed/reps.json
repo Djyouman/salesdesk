@@ -1,0 +1,1042 @@
+[
+{
+"id": "rep_ron-stauffer",
+"name": "Ron Stauffer",
+"brand": "altman",
+"brands": [
+"altman"
+],
+"role": "sales",
+"active": true,
+"openDeals": 64,
+"totalDeals": 895,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_gregory-frazier",
+"name": "Gregory Frazier",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 25,
+"totalDeals": 578,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_steve-dobbins",
+"name": "Steve Dobbins",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 95,
+"totalDeals": 456,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ben-murrell",
+"name": "Ben Murrell",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 61,
+"totalDeals": 405,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_nick-brooks",
+"name": "Nick Brooks",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 38,
+"totalDeals": 398,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_damion-wibbels",
+"name": "Damion Wibbels",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 20,
+"totalDeals": 354,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ron-sowards",
+"name": "Ron Sowards",
+"brand": "cortez",
+"brands": [
+"cortez",
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 20,
+"totalDeals": 307,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_chip-altstadt",
+"name": "Chip Altstadt",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": true,
+"openDeals": 124,
+"totalDeals": 258,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_dwayn-stroud",
+"name": "Dwayn Stroud",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 246,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_dustin-casey",
+"name": "Dustin Casey",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 24,
+"totalDeals": 222,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ryan-lewis",
+"name": "Ryan Lewis",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 9,
+"totalDeals": 189,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_hank-duus",
+"name": "Hank Duus",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 39,
+"totalDeals": 169,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_justin-nau",
+"name": "Justin Nau",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 40,
+"totalDeals": 164,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_augustus-yarnall",
+"name": "Augustus Yarnall",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 18,
+"totalDeals": 162,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_kris-moore",
+"name": "Kris Moore",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 50,
+"totalDeals": 150,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_matt-henemyre",
+"name": "Matt Henemyre",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 93,
+"totalDeals": 128,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_pete-stackow",
+"name": "Pete Stackow",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 127,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_cj-wildasin",
+"name": "CJ Wildasin",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 127,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_chuck-moore",
+"name": "Chuck Moore",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 1,
+"totalDeals": 110,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_alejandro-pereyra",
+"name": "Alejandro Pereyra",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 74,
+"totalDeals": 108,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_tim-wallick",
+"name": "Tim Wallick",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 30,
+"totalDeals": 90,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_john-j-sweigert",
+"name": "John J Sweigert",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 82,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_mike-tolar",
+"name": "Mike Tolar",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 2,
+"totalDeals": 79,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_matt-walker",
+"name": "Matt Walker",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": true,
+"openDeals": 3,
+"totalDeals": 72,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_hunter-carr",
+"name": "Hunter Carr",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 3,
+"totalDeals": 72,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_nick-haunschild",
+"name": "Nick Haunschild",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 9,
+"totalDeals": 72,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_pam-kellerman",
+"name": "Pam Kellerman",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 18,
+"totalDeals": 70,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_brian-weber",
+"name": "Brian Weber",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 1,
+"totalDeals": 70,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_drew-swonder",
+"name": "Drew Swonder",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": true,
+"openDeals": 3,
+"totalDeals": 67,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_mike-manion",
+"name": "Mike Manion",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 25,
+"totalDeals": 67,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_marc-meshell",
+"name": "Marc Meshell",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 1,
+"totalDeals": 56,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_matt-cox",
+"name": "Matt Cox",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 49,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_joel-guaderrama",
+"name": "Joel Guaderrama",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 1,
+"totalDeals": 49,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ricardo-williams-jr",
+"name": "Ricardo Williams Jr",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 48,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_kurt-crymes",
+"name": "Kurt Crymes",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 41,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_tony-deluca",
+"name": "Tony DeLuca",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 27,
+"totalDeals": 41,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_marvin-marty-holbrook",
+"name": "MARVIN (Marty) Holbrook",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 39,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_jake-richardson",
+"name": "Jake Richardson",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 38,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_alan-sawyers",
+"name": "Alan Sawyers",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 17,
+"totalDeals": 35,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_nate-spangler",
+"name": "Nate Spangler",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 32,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_nick-dufresne",
+"name": "Nick Dufresne",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 31,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_jaret-wilson",
+"name": "Jaret Wilson",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 30,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ray-witmeier",
+"name": "Ray Witmeier",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 26,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_sid-jackson",
+"name": "Sid Jackson",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 21,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_mike-weber",
+"name": "Mike Weber",
+"brand": "weber",
+"brands": [
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 3,
+"totalDeals": 21,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_jerry-brave",
+"name": "Jerry Brave",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 17,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_megan-kinsey",
+"name": "Megan Kinsey",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 16,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_scott",
+"name": "Scott",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 16,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_bob-hamilton",
+"name": "bob hamilton",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 15,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_thomas-neill",
+"name": "Thomas Neill",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 13,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_shawn-kunkel",
+"name": "Shawn Kunkel",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 11,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_brandon",
+"name": "Brandon",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 1,
+"totalDeals": 11,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_joe-coudon",
+"name": "Joe Coudon",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 10,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ozem",
+"name": "Ozem",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 8,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_paul-black",
+"name": "Paul Black",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 4,
+"totalDeals": 8,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_mikedeitz-altstadtplumbing-com",
+"name": "mikedeitz@altstadtplumbing.com",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 7,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_jeff-altstadtplumbing-com",
+"name": "jeff@altstadtplumbing.com",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 6,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_amanda-hickman",
+"name": "Amanda Hickman",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 5,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_hayden-northcutt",
+"name": "Hayden Northcutt",
+"brand": "dynamic",
+"brands": [
+"dynamic"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 5,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_daniel",
+"name": "Daniel",
+"brand": "perfection",
+"brands": [
+"dynamic",
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 3,
+"totalDeals": 4,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_david-shephard",
+"name": "David Shephard",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": true,
+"openDeals": 4,
+"totalDeals": 4,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_alex-dienes",
+"name": "Alex Dienes",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 3,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_george",
+"name": "GEORGE",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 3,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_tonya-brooks",
+"name": "Tonya Brooks",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 3,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_heidi-campbell",
+"name": "Heidi Campbell",
+"brand": "rbrooks",
+"brands": [
+"rbrooks"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 3,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_andy",
+"name": "Andy",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 3,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_matt-horton",
+"name": "Matt Horton",
+"brand": "cortez",
+"brands": [
+"cortez",
+"dynamic",
+"weber"
+],
+"role": "sales",
+"active": true,
+"openDeals": 3,
+"totalDeals": 3,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_claude-ridley",
+"name": "Claude Ridley",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 2,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_rowdie-burleson",
+"name": "Rowdie Burleson",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 2,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_ron-lindsey",
+"name": "Ron Lindsey",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 1,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_heather-brennan",
+"name": "Heather Brennan",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 1,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_scott-gugenheim",
+"name": "Scott Gugenheim",
+"brand": "cortez",
+"brands": [
+"cortez"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 1,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_erica-decker",
+"name": "Erica Decker",
+"brand": "altstadt",
+"brands": [
+"altstadt"
+],
+"role": "sales",
+"active": false,
+"openDeals": 0,
+"totalDeals": 1,
+"email": null,
+"groups": []
+},
+{
+"id": "rep_sue-russell",
+"name": "Sue Russell",
+"brand": "perfection",
+"brands": [
+"perfection"
+],
+"role": "sales",
+"active": true,
+"openDeals": 0,
+"totalDeals": 1,
+"email": null,
+"groups": []
+}
+]

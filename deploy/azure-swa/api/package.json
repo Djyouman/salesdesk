@@ -1,0 +1,14 @@
+{
+  "name": "salesdesk-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FSP SalesDesk API: Entra-authenticated document store over Cosmos DB plus an AI proxy",
+  "main": "src/functions/*.js",
+  "scripts": { "start": "func start" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@azure/cosmos": "^4.10.1",
+    "@azure/functions": "^4.17.0"
+  },
+  "engines": { "node": ">=20" }
+}

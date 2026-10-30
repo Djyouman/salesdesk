@@ -1,0 +1,8 @@
+{ "IsEncrypted": false, "Values": {
+  "FUNCTIONS_WORKER_RUNTIME": "node",
+  "COSMOS_CONNECTION_STRING": "AccountEndpoint=https://<account>.documents.azure.com:443/;AccountKey=<key>;",
+  "COSMOS_DB": "salesdesk", "COSMOS_CONTAINER": "docs",
+  "OWNER_EMAILS": "daniel.youman@flowservice.com",
+  "ALLOWED_EMAIL_DOMAINS": "flowservice.com",
+  "ANTHROPIC_API_KEY": "sk-ant-..."
+} }

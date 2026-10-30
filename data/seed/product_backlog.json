@@ -1,0 +1,610 @@
+{
+ "id": "backlog",
+ "updatedAt": "2026-10-30T20:32:44.329694+00:00",
+ "updatedBy": "Fable day loop (PM + sales review round 2)",
+ "items": [
+  {
+   "id": "P13",
+   "status": "done",
+   "title": "Numbers you can trust: quote save, GPMD floor, close dates, lost reason",
+   "verdict": "met (cycle 2, tests a\u2013d pass)"
+  },
+  {
+   "id": "P18",
+   "status": "done",
+   "title": "One-tap log with next-step date on cards, rows, deal and Home",
+   "verdict": "met (cycle 2)"
+  },
+  {
+   "id": "P15",
+   "status": "done",
+   "title": "Mobile More navigation",
+   "verdict": "met (cycle 2)"
+  },
+  {
+   "id": "P14",
+   "status": "done",
+   "title": "Deep-linkable routes for deal, account, quote, proposal",
+   "verdict": "met (cycle 2)"
+  },
+  {
+   "id": "P17",
+   "status": "done",
+   "title": "Close won/lost syncs quote and proposal status",
+   "verdict": "met (cycle 2)"
+  },
+  {
+   "id": "P2",
+   "status": "done",
+   "title": "Rep day view: my deals, my tasks, my week",
+   "verdict": "met (cycles 2\u20133)"
+  },
+  {
+   "id": "P16",
+   "status": "done",
+   "title": "Rep and plan reconciliation",
+   "verdict": "met (cycle 3, test3.js)"
+  },
+  {
+   "id": "P3",
+   "status": "done",
+   "title": "Tasks and follow-ups with due dates",
+   "verdict": "met (cycle 6, test7.js)"
+  },
+  {
+   "id": "P6",
+   "status": "done",
+   "title": "Maintenance agreement quote template",
+   "verdict": "met (cycle 3, test3.js)"
+  },
+  {
+   "id": "P19",
+   "status": "done",
+   "title": "Quote builder for real bids: per-type markups, tax, freight, crane/controls/electrical lines, lead time and install start, templates",
+   "verdict": "met (cycle 3, test3.js)"
+  },
+  {
+   "id": "P11",
+   "status": "done",
+   "title": "Lost-reason analytics",
+   "verdict": "met (cycle 4, test4.js)"
+  },
+  {
+   "id": "P7",
+   "status": "done",
+   "title": "Weekly CEO pipeline brief, generated",
+   "verdict": "met (cycle 4, test4.js)"
+  },
+  {
+   "id": "P20",
+   "status": "done",
+   "title": "Week-over-week movement report (created, advanced, slipped, won, lost, activities by rep)",
+   "verdict": "met (cycle 4, test4.js)"
+  },
+  {
+   "id": "P8",
+   "status": "done",
+   "title": "Stage aging and velocity",
+   "verdict": "met (cycles 4\u20135a, asserted in test5.js)"
+  },
+  {
+   "id": "P1",
+   "status": "partly-done",
+   "title": "Pipedrive stage, notes, persons and activities recovery",
+   "verdict": "June 2026 full export merged (stages, contacts, lost reasons, comments, man-hours); deals created after June and Pipedrive Notes/Activities still need a fresh export through Setup \u203a Data"
+  },
+  {
+   "id": "P22",
+   "status": "done",
+   "title": "Quote and movement math integrity",
+   "verdict": "met (cycle 5b, test6.js a\u2013e)"
+  },
+  {
+   "id": "P21",
+   "status": "done",
+   "title": "Attachments: SharePoint link list per deal, then assets",
+   "verdict": "met (cycle 4, test4.js)"
+  },
+  {
+   "id": "P23",
+   "status": "done",
+   "title": "Capacity integrity",
+   "verdict": "met (cycle 5b, test6.js)"
+  },
+  {
+   "id": "P4",
+   "status": "done",
+   "title": "Brand logos in proposals",
+   "verdict": "all nine brand logos live on proposal covers (cycle 8)"
+  },
+  {
+   "id": "P24",
+   "status": "done",
+   "title": "Brand-scoped plan numbers and in-FY coverage",
+   "verdict": "met (cycle 5b, test6.js)"
+  },
+  {
+   "id": "P9",
+   "status": "done",
+   "title": "Contacts import and account hierarchy editing",
+   "verdict": "met (cycle 6, test7.js)"
+  },
+  {
+   "id": "P10",
+   "status": "done",
+   "title": "Offline-tolerant mobile editing",
+   "verdict": "met (cycle 6, test7.js)"
+  },
+  {
+   "id": "P12",
+   "status": "done",
+   "title": "Record archive strategy before 25,000-document ceiling",
+   "verdict": "documented in docs/ARCHIVE.md (cycle 7); code when counts pass 15,000"
+  },
+  {
+   "id": "P25",
+   "status": "done",
+   "title": "Close dialog uses selected quote; text proposal shows tax; unique quote numbers",
+   "verdict": "met (cycle 5b)"
+  },
+  {
+   "id": "P26",
+   "status": "done",
+   "title": "Import-trust pass: stage conflicts, Pipedrive GM sanity, labor-GPMD guard, velocity source label",
+   "verdict": "met (cycle 10, test9.js)"
+  },
+  {
+   "id": "P27",
+   "status": "done",
+   "title": "Canonical lost reasons with rep dimension",
+   "verdict": "met (cycle 10)"
+  },
+  {
+   "id": "P28",
+   "status": "done",
+   "title": "Pipedrive labor hours \u2192 SalesDesk quote pre-fill with GPMD verdict",
+   "verdict": "met (cycle 10)"
+  },
+  {
+   "id": "P29",
+   "status": "done",
+   "title": "Proposal-age velocity and stuck list",
+   "verdict": "met (cycle 10)"
+  },
+  {
+   "id": "P30",
+   "status": "done",
+   "title": "Outlier-safe vertical win rates",
+   "verdict": "met (cycle 10); 99th-percentile cap not applied, revisit if needed"
+  },
+  {
+   "id": "P31",
+   "status": "done",
+   "title": "Parent-account roll-up: confirm UI, cross-brand card",
+   "verdict": "met (cycle 11, test10.js)"
+  },
+  {
+   "id": "P32",
+   "status": "partly-done",
+   "title": "Deal contact linked by Pipedrive person id",
+   "verdict": "ids linked and empty lists hidden (cycle 10); phones/emails need the People export"
+  },
+  {
+   "id": "P33",
+   "status": "done",
+   "title": "Paused and mega-outlier deals off the live board",
+   "verdict": "met (cycle 10)"
+  },
+  {
+   "id": "P5",
+   "status": "retired",
+   "title": "PDF export of proposals"
+  },
+  {
+   "id": "P34",
+   "status": "done",
+   "title": "PM renewal pipeline from agreement anniversaries",
+   "verdict": "met (cycle 12, test11.js)"
+  },
+  {
+   "id": "P51",
+   "priority": 31,
+   "status": "done",
+   "night": 0,
+   "title": "Cycle 10\u201311 defect fixes: proposal age, stuck list, multi-brand definition, lost buckets, parent integrity",
+   "verdict": "met (cycle 13, test12.js)"
+  },
+  {
+   "id": "P35",
+   "priority": 32,
+   "status": "done",
+   "night": 1,
+   "title": "Weekly pipeline snapshots for durable trends",
+   "why": "Week movement depends on SalesDesk timestamps imported deals lack; the CEO needs a trend that survives cutover.",
+   "acceptance": "product/snap-YYYY-Www written once per ISO week on first management render (keys open, weighted, wonFY, byBrand, byRep, byStage, stuck, dq); Analytics \u203a Multi-year 'Pipeline trend' reads snaps; weekMovement() uses the prior snap when stageAt is empty.",
+   "verdict": "met (cycle 14, test13.js); first live snapshot seeded for 2026-W44"
+  },
+  {
+   "id": "P36",
+   "priority": 33,
+   "status": "done",
+   "night": 1,
+   "title": "Won date and stage timestamps from the next export; performance indexes",
+   "why": "Proposal medians stay approximate until Won time is imported; indexes keep 7,000+ deals fast on phones.",
+   "acceptance": "importer maps 'Won time'/'Lost time'/'Last stage change' to wonDate/lostDate/stageChangedAt; S.dealsByOrg index; home, pipeline list, accounts list, analytics overview each < 120 ms headless at 1400px; all suites green.",
+   "verdict": "met (cycle 14): import stamps mapped; dealsByOrg index; renders 8\u201354 ms headless"
+  },
+  {
+   "id": "P37",
+   "priority": 34,
+   "status": "done",
+   "night": 2,
+   "title": "Commit / best-case forecast by rep and brand",
+   "why": "A CRO cannot run a forecast call on a stage-weighted number alone.",
+   "acceptance": "forecastCat on deals (commit|best|pipeline|omit, default from stage); window.forecastRoll({month}) rows {rep,brand,commit,best,wgt,plan,gap}; Forecast tab columns; CEO brief 'Commit this month vs plan' line; sales sees own rep only.",
+   "verdict": "met (cycle 15, test14.js)"
+  },
+  {
+   "id": "P38",
+   "priority": 35,
+   "status": "done",
+   "night": 2,
+   "title": "Forecast accuracy from snapshots",
+   "why": "Commit discipline sticks only when last week's commit meets what booked.",
+   "acceptance": "forecastAccuracy() {rep,committed,won,hit} from >=2 snaps; Analytics card; honest empty state with <2 snaps.",
+   "verdict": "met (cycle 16, test15.js)"
+  },
+  {
+   "id": "P39",
+   "priority": 36,
+   "status": "done",
+   "night": 2,
+   "title": "Bid calendar (bidDue)",
+   "why": "Estimators run their week by bid due dates; capture from day one and map on import.",
+   "acceptance": "bidDue editable in quick log and deal edit; Home 'Bids due this week'; past-due bid without a quote shows a red pill; list sortable by bidDue; importer maps 'Bid due date'.",
+   "verdict": "met (cycle 15, test14.js)"
+  },
+  {
+   "id": "P40",
+   "priority": 37,
+   "status": "done",
+   "night": 3,
+   "title": "GM sign-off for below-floor bids",
+   "why": "GPMD becomes culture when a below-floor bid cannot go out without a brand GM's name on it.",
+   "acceptance": "sales setting a below-floor quote to sent leaves draft + approvalRequested; brandmgr approveQuote/declineQuote; proposal download blocked until approved; Home mgmt card 'Bids awaiting GPMD approval'; approvals logged; above-floor unaffected.",
+   "verdict": "met (cycle 16, test15.js)"
+  },
+  {
+   "id": "P41",
+   "priority": 38,
+   "status": "done",
+   "night": 3,
+   "title": "Quote-from-hours with real cost lines and estimator field",
+   "why": "A one-line implied lot cannot be edited into a real estimate; 239 deals already name an estimator.",
+   "acceptance": "quoteFromHours yields labor/material/equipment/sub lines summing to the same implied cost, GPMD within $1; estimator on quote and proposal; Quotes filter 'mine as estimator'.",
+   "verdict": "met (cycle 18, test17.js)"
+  },
+  {
+   "id": "P42",
+   "priority": 39,
+   "status": "done",
+   "night": 0,
+   "title": "PM renewal pipeline (shipped day 1 as P34)",
+   "verdict": "met (cycle 12); night 3 adds 30/60/90 buckets and a CEO brief renewal line"
+  },
+  {
+   "id": "P43",
+   "priority": 40,
+   "status": "done",
+   "night": 4,
+   "title": "Data-quality dashboard by brand and rep",
+   "why": "No GM trusts a report until they can see what is missing and who owns it.",
+   "acceptance": "dqSummary() {brand,rep,counts,score}; Analytics \u203a Quality with deep links; totals reconcile to Home Needs attention; sales sees own rows.",
+   "verdict": "met (cycle 18, test17.js)"
+  },
+  {
+   "id": "P44",
+   "priority": 41,
+   "status": "done",
+   "night": 4,
+   "title": "Won-deal handoff export to ServiceTitan / Intacct",
+   "why": "Won deals must land in the job system without retyping.",
+   "acceptance": "stJobNo + enteredInST on deal; Setup \u203a Data CSV export of won deals in range (downloads); Home mgmt card 'Won, not in ServiceTitan: n'.",
+   "verdict": "met (cycle 20, test18.js)"
+  },
+  {
+   "id": "P45",
+   "priority": 42,
+   "status": "done",
+   "night": 4,
+   "title": "Email-to-deal logging (paste .eml text)",
+   "why": "Email is where half of selling happens; without it the activity count lies.",
+   "acceptance": "parseEmail(text) {from,to,date,subject,body} on two fixtures; logs type 'email' activity counted by weekMovement; contact matched by email.",
+   "verdict": "met (cycle 21, test19.js)"
+  },
+  {
+   "id": "P46",
+   "priority": 43,
+   "status": "done",
+   "night": 5,
+   "title": "Performance at 7,000+ deals (virtualised tables, indexes)",
+   "why": "Full-table renders will be felt on phones as history grows.",
+   "acceptance": "lists render 200 rows + show more; home, pipeline list, accounts list, analytics overview each <120ms headless; all suites green.",
+   "verdict": "met (cycle 22, test20.js; PM tab 362\u219211 ms)"
+  },
+  {
+   "id": "P47",
+   "priority": 44,
+   "status": "done",
+   "night": 5,
+   "title": "Rep onboarding and training mode",
+   "why": "Abandoning Pipedrive is a habit change; a guided first session beats a manual.",
+   "acceptance": "training deals d_training_* excluded from kpis, weekMovement, ceoBriefData, snaps, exports; tour sets meUser.onboardedAt; Team shows onboarded.",
+   "verdict": "met (cycle 23, test21.js)"
+  },
+  {
+   "id": "P48",
+   "priority": 45,
+   "status": "done",
+   "night": 5,
+   "title": "Accessibility pass (WCAG 2.1 AA)",
+   "why": "Keyboard-only estimators and dark-mode phones must read every pill and move a stage.",
+   "acceptance": "axe-core 0 serious/critical on home, pipeline, deal, quote, proposal at 1400/400 light/dark; keyboard stage move; aria-live toasts.",
+   "verdict": "met (cycle 24, test22.js: axe 0 serious/critical across 10 view/theme combinations)"
+  },
+  {
+   "id": "P49",
+   "priority": 46,
+   "status": "retired",
+   "night": 5,
+   "title": "Service-address territory map (stretch)",
+   "why": "Only 36 deals carry addresses today.",
+   "acceptance": "static SVG dot map from a geocoded CSV upload; drop if coverage <200 deals.",
+   "verdict": "Retired by PM review: 36 addressed deals, below the 200-deal threshold."
+  },
+  {
+   "id": "P50",
+   "priority": 47,
+   "status": "blocked",
+   "title": "Fresh Pipedrive export (Deals, Notes, People, Activities) through Setup \u203a Data",
+   "why": "647 open deals created since June have no stage names, contacts, proposal dates or hours; every contact lacks a phone.",
+   "acceptance": "Owner action; importer is ready."
+  },
+  {
+   "id": "P52",
+   "priority": 48,
+   "status": "done",
+   "title": "Brand palettes as named tokens from the brand skills; rep detail modal",
+   "why": "CEO direction mid-day: branding must be straight out of the skills with no generic colour names; clicking a rep must show bids and details.",
+   "acceptance": "Every brand has named tokens with source and fonts; Setup shows them; proposal uses token roles; rep modal with open bids, won, lost reasons, plan attainment, commit; links everywhere.",
+   "verdict": "met (cycle 17, test16.js)"
+  },
+  {
+   "id": "P53",
+   "priority": 49,
+   "status": "done",
+   "title": "Published live-data snapshot so direct visits show all data",
+   "why": "CEO direction: data must be present when the artifact is opened as a plain website, where the shared database is unavailable.",
+   "acceptance": "data/live.json published beside the page with every collection; loaded under local edits when db is null; rail badge shows snapshot date; nightly build refreshes it.",
+   "verdict": "met (cycle 19)"
+  },
+  {
+   "id": "P54",
+   "priority": 50,
+   "status": "done",
+   "night": 1,
+   "title": "Scope-consistent forecast and CEO brief",
+   "why": "The Friday forecast call is the first place a GM catches SalesDesk disagreeing with itself: brand filter shows platform plan and every other brand's reps.",
+   "acceptance": "S.ui.brand='cortez' \u2192 Forecast header plan = sum of Cortez goals for the month; no non-Cortez rows; no rows matching /new hire|mgmt/i; sales role \u2192 only own row; ceoBriefText commit/plan equals forecastRoll({month,deals:ds,brand}); existing suites green.",
+   "effort": "S",
+   "source": "PM review 10-30",
+   "verdict": "met (cycle 28, test23.js)"
+  },
+  {
+   "id": "P55",
+   "priority": 51,
+   "status": "done",
+   "night": 1,
+   "title": "Rollout-safe permissions",
+   "why": "73 reps must neither be locked out nor able to edit each other's deals on day one.",
+   "acceptance": "Every deal-mutating action calls canEditDeal (saveQuickLog, newQuote/saveQuote, startRenewal, saveHandoff); AI tools and repModal use filteredDeals(); permission_denied on admin collections never flips the session to view-only (done, cycle 26); uid link falls back to signins for non-admins (done, cycle 26); test stubs S.db to throw permission_denied and asserts the role stays writable.",
+   "effort": "M",
+   "source": "PM review 10-30; verified against the hosted API",
+   "verdict": "met (cycle 29, test24.js)"
+  },
+  {
+   "id": "P56",
+   "priority": 52,
+   "status": "done",
+   "night": 1,
+   "title": "One outlier/paused guard everywhere",
+   "why": "$6.2B at the top of Accounts destroys trust in every other total.",
+   "acceptance": "A sane(d) helper used by recompute roll-ups, account page header, Team counts and multi-year; Accounts first row is not the $6.2B Weber outlier's org; 'Last' renamed 'Last touch' and derived from lastActivityAt||close.",
+   "effort": "S",
+   "source": "PM review 10-30",
+   "verdict": "met (cycle 28, test23.js)"
+  },
+  {
+   "id": "P57",
+   "priority": 53,
+   "status": "done",
+   "night": 2,
+   "title": "Brand forecast roll-up with week-over-week delta",
+   "why": "The CRO runs the call by brand, not 60 rep rows.",
+   "acceptance": "Forecast tab adds a brand table (won, commit, best, weighted, plan, gap) above rep rows; delta columns vs prevSnapshot().commitByRep; totals equal rep-row sums within $1.",
+   "effort": "M",
+   "source": "PM + sales agent 10-30",
+   "verdict": "met (cycle 30, test25.js)"
+  },
+  {
+   "id": "P58",
+   "priority": 54,
+   "status": "done",
+   "night": 2,
+   "title": "Pipedrive parity check for cutover",
+   "why": "'No loss of trust in the numbers' needs a visible reconciliation against the last import.",
+   "acceptance": "Setup \u203a Data card compares open count/value and won FY by brand against totals stored at import; flags any brand off by >1%; headless test imports a 3-row fixture and sees the card update.",
+   "effort": "M",
+   "source": "PM review 10-30",
+   "verdict": "met (cycle 33, test28.js)"
+  },
+  {
+   "id": "P59",
+   "priority": 55,
+   "status": "done",
+   "night": 3,
+   "title": "GM month-end pack",
+   "why": "GMs will otherwise rebuild it in Excel from Pipedrive.",
+   "acceptance": "gmPackText(brand): won vs plan, bids sent with GPMD and below-floor approvals with reasons, renewals 90d, DQ score, stuck proposals; Copy button on Home for brandmgr; numbers equal the cards.",
+   "effort": "M",
+   "source": "PM review 10-30",
+   "verdict": "met (cycle 37, test31.js)"
+  },
+  {
+   "id": "P60",
+   "priority": 56,
+   "status": "built-awaiting-deploy",
+   "night": null,
+   "title": "Hosted web app on an FSP domain with Microsoft sign-in",
+   "why": "CEO direction: a real site to send people to, behind Microsoft login. Reps cannot be sent to a claude.ai artifact.",
+   "acceptance": "deploy/azure-swa: Static Web App + Entra ID (tenant-locked) + Functions API + Cosmos DB; same page via shim; headless end-to-end green for owner, sales (name-matched, uid linked) and guest viewer; runbook in deploy/azure-swa/README.md. Owner action: run infra/deploy.sh, add DNS CNAME, push repo.",
+   "effort": "L",
+   "source": "CEO 10-30"
+  },
+  {
+   "id": "P61",
+   "priority": 57,
+   "status": "done",
+   "night": null,
+   "title": "Pipedrive font styling and icons",
+   "why": "CEO direction: reps should feel at home on day one.",
+   "acceptance": "Source Sans 3 UI face, 14 px base, 600 headings, sentence-case pills and labels, thin rounded line icons; axe and regression suites green.",
+   "verdict": "met (cycle 25)",
+   "source": "CEO 10-30"
+  },
+  {
+   "id": "P62",
+   "priority": 58,
+   "status": "done",
+   "night": 1,
+   "title": "Weighted forecast: stage-weighted vs imported probability, with disagreement flag",
+   "why": "dealProb prefers the October Pipedrive probability on 880 of 953 open deals and 196 contradict the stage shown; the board number is wrong until this is explicit.",
+   "acceptance": "Setting toggles the weighting basis; Quality counts |prob \u2212 stage.p| > 0.2; header states which basis is in use.",
+   "effort": "S",
+   "source": "Sales agent 10-30",
+   "verdict": "met (cycle 29, test24.js) \u2014 the \"probability \u2260 stage\" check was dropped as redundant with Stage conflict"
+  },
+  {
+   "id": "P63",
+   "priority": 59,
+   "status": "done",
+   "night": 2,
+   "title": "Close-date slips recorded and surfaced",
+   "why": "Sandbagging is invisible without a slip history.",
+   "acceptance": "closeHistory appended on every close-date change; 'Slipped' rows on This week, CEO brief and Forecast per rep; test moves a date twice and sees two entries.",
+   "effort": "S",
+   "source": "Sales agent 10-30",
+   "verdict": "met (cycle 30, test25.js)"
+  },
+  {
+   "id": "P64",
+   "priority": 60,
+   "status": "done",
+   "night": 2,
+   "title": "Proposal: equipment schedule, lead time, warranty; print-ready PDF path",
+   "why": "Hospital facilities directors do not accept an .html attachment; six-figure bids need an equipment schedule.",
+   "acceptance": "Project proposals list equipment lines as a schedule; Lead time and Warranty sections from quote fields; downloaded HTML carries print CSS with page breaks and a 'Save as PDF' note; proposal doc renders in all 9 brands without overflow.",
+   "effort": "M",
+   "source": "Sales agent 10-30",
+   "verdict": "met (cycle 31, test26.js)"
+  },
+  {
+   "id": "P65",
+   "priority": 61,
+   "status": "done",
+   "night": 1,
+   "title": "GPMD floors must be set per brand before verdicts show",
+   "why": "Every brand inherits the $850 default, so Cortez's verdict is fiction today.",
+   "acceptance": "Quotes page banner until the brand's GPMD is explicitly set; Setup \u203a GPMD shows 'inherits default' badges; verdict pill shows 'default floor' tooltip until set.",
+   "effort": "S",
+   "source": "Sales agent 10-30",
+   "verdict": "met (cycle 29, test24.js)"
+  },
+  {
+   "id": "P66",
+   "priority": 62,
+   "status": "done",
+   "night": 3,
+   "title": "Two-step quick log and lighter quote line editor on phones",
+   "why": "Seven fields on a 400 px phone is too many; the line editor becomes a thumb fight.",
+   "acceptance": "Quick log shows type + text + next date first, 'More' reveals stage/close/forecast; quote lines collapse to a card per line under 600 px; freight line type added; axe green.",
+   "effort": "M",
+   "source": "Sales agent 10-30",
+   "verdict": "met (cycle 32, test27.js)"
+  },
+  {
+   "id": "P67",
+   "priority": 63,
+   "status": "done",
+   "night": null,
+   "title": "Proposal rebuilt as a letter-format brand document",
+   "why": "CEO direction mid-day: the proposals need a lot more work; a web-page cover is not what a facilities director signs.",
+   "acceptance": "Letterhead per brand skills, prepared-for and details blocks, numbered sections incl. existing conditions, equipment schedule, investment with alternates and payment, schedule, warranty, acceptance with full signature blocks; renders in all brands at phone width; prints to letter PDF.",
+   "verdict": "met (cycle 33); extended by P72 (cycle 35)"
+  },
+  {
+   "id": "P68",
+   "priority": 64,
+   "status": "done",
+   "night": null,
+   "title": "Email from the deal and inbox sync through Microsoft 365",
+   "why": "CEO direction: reps must email from the tool and have customer emails connect to the opportunity.",
+   "acceptance": "Send via the viewer's Outlook with the deal tag; sync files tagged/contact emails as activities; graceful per-code errors; hidden without the connector.",
+   "verdict": "met for the claude.ai artifact (cycle 34, test29.js); hosted build needs Microsoft Graph (P70)"
+  },
+  {
+   "id": "P69",
+   "priority": 65,
+   "status": "done",
+   "night": null,
+   "title": "Estimator spreadsheet import on Quotes",
+   "why": "CEO direction: estimators already price in Excel; retyping lines into a quote will not happen.",
+   "acceptance": "xlsx/csv/paste; header and column detection with override; type inference; labor hours \u2192 man-days; totals skipped; sheet total as price; quote created with import note.",
+   "verdict": "met (cycle 34, test30.js)"
+  },
+  {
+   "id": "P70",
+   "priority": 66,
+   "status": "done",
+   "night": 1,
+   "title": "Hosted build: email send and inbox sync via Microsoft Graph",
+   "why": "The Azure version has no claude.ai connector; the same two actions need Graph with the user's token.",
+   "acceptance": "SWA login requests Mail.Send and Mail.Read; API endpoints /api/mail/send and /api/mail/search call Graph with the forwarded token; shim exposes them as the mcp capability so the page code is unchanged; mock server fakes Graph for test_web.js.",
+   "effort": "M",
+   "source": "CEO 10-30",
+   "verdict": "met (cycle 36): api/src/functions/mail.js over Microsoft Graph app permissions; shim emulates the connector; test_web.js sends and syncs through the mock. Needs admin consent + Exchange application access policy at deploy."
+  },
+  {
+   "id": "P71",
+   "priority": 67,
+   "status": "done",
+   "night": 2,
+   "title": "Shared intake mailbox (sales@brand) auto-filing",
+   "why": "Emails to the tool without a tag: a shared mailbox reps cc, swept nightly and matched to deals by contact and tag.",
+   "acceptance": "Admin sets a shared mailbox per brand; sync reads it (mailboxOwnerEmail) and files by tag or contact; unmatched go to a review list.",
+   "effort": "M",
+   "source": "CEO 10-30",
+   "verdict": "met (cycle 38, test32.js); needs delegated access to each shared mailbox for whoever runs the sync"
+  },
+  {
+   "id": "P72",
+   "priority": 68,
+   "status": "done",
+   "night": null,
+   "title": "Proposal pass two: equipment data, all-in pricing, qualifications, schedule, warranty table, cover letter",
+   "why": "Facilities-director review: a CFO must see what is bought, what it costs all-in and why this contractor.",
+   "acceptance": "Equipment fields on quote lines render as a data schedule; tax and totals per option; clarifications for permits/tax/bond; milestone table; warranty by component; brand profile drives qualifications/insurance/references; cover letter; all 10 brands render, prints to PDF.",
+   "verdict": "met (cycle 35, test26.js); next: nameplate photos, dated schedule from acceptance date, e-signature"
+  }
+ ]
+}

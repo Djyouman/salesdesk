@@ -1,0 +1,10 @@
+node_modules/
+deploy/azure-swa/app/
+deploy/azure-swa/api/node_modules/
+deploy/azure-swa/api/local.settings.json
+data/dbdump/
+data/history.bak.json
+data/orgs.bak.json
+scratchpad-*.html
+*.log
+.DS_Store

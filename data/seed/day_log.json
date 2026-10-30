@@ -1,0 +1,754 @@
+{
+ "id": "day-2026-10-30",
+ "date": "2026-10-30",
+ "runner": "Fable (day 1, owner session)",
+ "headline": "SalesDesk v0.35.0: 37 cycles on day one \u2014 roadmap, Pipedrive-style UI, hosted Microsoft-login build with Graph email, Outlook email on every deal, estimator import, a facilities-director proposal and the GM month-end pack",
+ "cycles": [
+  {
+   "cycle": 1,
+   "start": "12:40pm ET",
+   "end": "1:06pm ET",
+   "shipped": [
+    {
+     "item": "App shell and data layer",
+     "result": "Single-file CRM published privately; 7,034 deals, 2,379 accounts, FY2026 plans loaded as published files; live edits in the shared database; local mode for testing.",
+     "businessReason": "Leaves Pipedrive without losing five years of history or paying per-seat fees.",
+     "verdict": "met"
+    },
+    {
+     "item": "Pipeline board/list/forecast/closed",
+     "result": "Drag-to-stage board, weighted forecast by close month, won/lost list; stage inferred from Pipedrive weighted probability.",
+     "businessReason": "One view of $124M open across seven brands; weighting gives a defensible forecast.",
+     "verdict": "met"
+    },
+    {
+     "item": "Accounts with site clustering and merge review",
+     "result": "2,681 Pipedrive org names grouped into accounts with sites; 176 proposed groups for confirm/split; AI check; PM base and whitespace lists.",
+     "businessReason": "Customer consolidation is the precondition for cross-brand account management and the PM flywheel.",
+     "verdict": "met"
+    },
+    {
+     "item": "Quotes with bid options and GPMD",
+     "result": "Crew x days, cost lines, options; GPMD vs brand floor with chase/reprice/pass and price-to-clear; deal value syncs from the selected option.",
+     "businessReason": "Makes R. Brooks' estimating discipline the platform default at bid time.",
+     "verdict": "met"
+    },
+    {
+     "item": "Brand-themed proposals",
+     "result": "Generated from a quote in each brand's identity with official hex codes; downloadable standalone HTML.",
+     "businessReason": "Consistent, fast proposals across brands without a designer.",
+     "verdict": "met (logos pending)"
+    },
+    {
+     "item": "GPMD & Plan, Analytics, Team, Assistant, Setup",
+     "result": "Capacity in man-days vs crews, orders/quote plan vs actual by brand and rep, win rates, aging, multi-year; roles and groups; AI intake, coach, scope writer; GPMD and brand settings.",
+     "businessReason": "Management layer from day one so the tool is a sales operating system, not a contact list.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "Headless Chromium on the local build: every route and sub-tab at 1400px and 400px, light and dark, zero console errors, no horizontal scroll; functional chain (new deal with account match \u2192 stage \u2192 quote \u2192 GPMD \u2192 add option \u2192 proposal \u2192 merge confirm/split \u2192 mark won \u2192 persisted) passed. Live page: one shared-database read at interact level confirmed the backlog is readable; 76 documents seeded (74 reps, settings, backlog).",
+   "couldNotVerify": "The live claude.ai page itself (sign-in, AI calls, downloads) was not driven by a browser; local mode stood in for the shared database.",
+   "defectsFixed": [
+    "Modal selector root bug",
+    "Derived state not recomputed after local writes",
+    "Past-dated deals shown as closing soon",
+    "Lost-value outliers skewing value win rate"
+   ]
+  },
+  {
+   "cycle": 2,
+   "start": "1:06pm ET",
+   "end": "1:19pm ET",
+   "salesAgentTop3": [
+    "Quick log with next action and a Today list (the ten-second test)",
+    "A bid you can build and send: templates, typed markups, tax, lead time; numbered, licensed proposal with rep contact",
+    "Contacts and files, the two reasons a rep still opens Pipedrive"
+   ],
+   "shipped": [
+    {
+     "item": "P13 Numbers you can trust",
+     "result": "Quote edits no longer overwrite deal value or stage; blank GPMD settings fall back to defaults; blank close date defaults to today; lost reason is required.",
+     "businessReason": "Forecast and FY bookings cannot move without a human pricing or closing something.",
+     "verdict": "met"
+    },
+    {
+     "item": "P18 Ten-second log",
+     "result": "Log button on every card, row, deal and Home item: type chips, note, next action date and text, optional stage and close change, tap-to-call. Home Today lists follow-ups due and deals cold 21+ days.",
+     "businessReason": "Activity that takes ten seconds gets logged; next dates make the forecast real.",
+     "verdict": "met"
+    },
+    {
+     "item": "P15 Mobile More",
+     "result": "Sixth tab reaches Plan, Analytics, Team, Setup on a phone.",
+     "businessReason": "GM and CEO can run month-end from a phone.",
+     "verdict": "met"
+    },
+    {
+     "item": "P14 Deep links",
+     "result": "Deals, accounts, quotes and proposals have shareable links that survive reload.",
+     "businessReason": "A CRM nobody can link into does not displace Pipedrive.",
+     "verdict": "met"
+    },
+    {
+     "item": "P17 Close syncs quotes/proposals",
+     "result": "Won/lost updates linked quote and proposal status; won value pre-fills from the quote.",
+     "businessReason": "Capacity and proposal lists agree with the pipeline.",
+     "verdict": "met"
+    },
+    {
+     "item": "GPMD usability",
+     "result": "Verdict waits for costs; shows GM at the clearing price and man-days to cut; reprice band editable; floor calculator from overhead \u00f7 billable man-days.",
+     "businessReason": "Estimators get levers, not a grade.",
+     "verdict": "met"
+    },
+    {
+     "item": "Proposal credibility",
+     "result": "Quote and proposal numbers (BRAND-YYYY-NNN, revisions), rep phone/email, brand license in footer; download blocked when scope is empty.",
+     "businessReason": "Hospital AP can cut a PO against it; Florida license rule met.",
+     "verdict": "met"
+    }
+   ],
+   "notShipped": [
+    {
+     "item": "P2 full rep day view",
+     "why": "Today list shipped for all roles; sales-specific plan line and hygiene hiding done; closing-soon per rep and my-week summary next cycle."
+    }
+   ],
+   "verification": "tools/test.js regression (routes, tabs, 1400/400, light/dark, functional chain) and tools/test2.js PM acceptance (P13 a\u2013d, More nav, quick log, deep links): all pass, zero console errors.",
+   "couldNotVerify": "Live claude.ai page not driven by a browser; sign-in linking flow exercised only in code review."
+  },
+  {
+   "cycle": 3,
+   "start": "1:19pm ET",
+   "end": "1:24pm ET",
+   "shipped": [
+    {
+     "item": "P6 Maintenance agreement quotes",
+     "result": "Maintenance deals quote as annual agreements: visits \u00d7 hours \u00d7 techs, covered equipment, visit cadence and equipment list on the proposal.",
+     "businessReason": "The flywheel's first dollar can now be priced and proposed; a 35% GM PM agreement fails the GPMD floor, which is exactly the conversation to have.",
+     "verdict": "met"
+    },
+    {
+     "item": "P19 Real-bid quote builder",
+     "result": "Job templates (RTU, chiller, boiler, three PM cadences), markup-by-line-type pricing with per-brand defaults, sales tax on equipment and material, install start date feeding capacity.",
+     "businessReason": "Estimators price the way they already think; capacity lands in the install month, not the close month.",
+     "verdict": "met"
+    },
+    {
+     "item": "P16 Plan reconciliation",
+     "result": "Plan rep names map to Pipedrive owners in Team; Rep plans, rep attainment and the AI scorecard use the mapping; brands without plans say so.",
+     "businessReason": "GMs can trust the roster view at month end.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test3.js acceptance plus test.js and test2.js regressions, zero console errors, 1400 and 400px.",
+   "couldNotVerify": "Live page interaction on claude.ai."
+  },
+  {
+   "cycle": 4,
+   "start": "1:24pm ET",
+   "end": "1:26pm ET",
+   "shipped": [
+    {
+     "item": "P20 This week movement",
+     "result": "Created, advanced, won, lost since Monday with activities by rep and the deals that moved.",
+     "businessReason": "Monday sales management runs on deltas, not totals.",
+     "verdict": "met"
+    },
+    {
+     "item": "P11 Lost reasons",
+     "result": "Lost reasons by reason, value and brand (required on every loss from go-live).",
+     "businessReason": "Price vs competitor vs no-decision is the sales-management lever.",
+     "verdict": "met"
+    },
+    {
+     "item": "P7 CEO weekly brief",
+     "result": "Generated on Home for management: week movement, coverage of FY gap, brand month vs plan, largest deals closing; copies as text.",
+     "businessReason": "A Sunday-night read with no AI dependency and no analyst.",
+     "verdict": "met"
+    },
+    {
+     "item": "P21 Deal links",
+     "result": "SharePoint/OneDrive links on every deal.",
+     "businessReason": "Keeps the bid file one click from the deal without moving files.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test4.js plus all prior suites, zero console errors at 400px and 1400px.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": "5",
+   "start": "1:26pm ET",
+   "end": "1:33pm ET",
+   "shipped": [
+    {
+     "item": "P8 Stage velocity + P9 site move",
+     "result": "Median and longest days in stage by brand, stuck list; move a site and its deals between accounts.",
+     "businessReason": "Earliest warning of a dead deal; account hierarchy reps can correct themselves.",
+     "verdict": "met"
+    },
+    {
+     "item": "P22\u2013P25 Integrity pass",
+     "result": "Stage stamps on every path; tax on the sell basis; templates clear stale overrides; activity counts exclude system events; capacity loads one quote per deal with an overdue row and an honest default-assumption flag; brand managers see their own plan; CEO coverage uses in-FY pipeline.",
+     "businessReason": "In a PE-backed roll-up a wrong number costs more trust than a blank one; the tax line, capacity row and Sunday brief now agree.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test6.js (18 assertions) and all prior suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 6,
+   "start": "1:33pm ET",
+   "end": "1:50pm ET",
+   "shipped": [
+    {
+     "item": "P3 Tasks",
+     "result": "Next actions are now tasks: created from the quick log, listed on the deal, due on Home with a Done button; completing one logs the activity and rolls the deal's next date forward.",
+     "businessReason": "A CRM without next steps leaks deals; this closes the loop in one tap.",
+     "verdict": "met"
+    },
+    {
+     "item": "P9 Contacts import",
+     "result": "Paste a CSV of contacts; matched to accounts by name or alias; shown on deals with tap-to-call.",
+     "businessReason": "The relationship is the asset; reps stop opening Pipedrive for phone numbers once persons are loaded.",
+     "verdict": "met"
+    },
+    {
+     "item": "P10 Offline tolerance",
+     "result": "Edits that fail on bad signal save locally, queue and retry; permission errors never queue.",
+     "businessReason": "Roofs and mechanical rooms have no signal; the log still gets captured.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test7.js plus all prior suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 7,
+   "start": "1:50pm ET",
+   "end": "2:10pm ET",
+   "shipped": [
+    {
+     "item": "P1 Pipedrive importer (code complete)",
+     "result": "Drop the Pipedrive Deals, Notes, People and Activities exports into Setup \u203a Data; stages, notes, contacts and open activities merge onto the history by Pipedrive ID; re-imports are no-ops.",
+     "businessReason": "This is the cutover trust gate: reps see the board they set themselves, with their notes and contacts, on day one.",
+     "verdict": "met in code; needs the export files"
+    },
+    {
+     "item": "P4 logos (DAS, FSP)",
+     "result": "Real logos on Dynamic and FSP proposal covers.",
+     "businessReason": "Proposals stop looking like templates.",
+     "verdict": "partly met"
+    },
+    {
+     "item": "P12 archive strategy",
+     "result": "Documented; 25,000-document ceiling reached in about six months at full adoption; activity-only archive plan.",
+     "businessReason": "No surprise outage when the shop is live on it.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test8.js (20 assertions) plus all prior suites, zero console errors.",
+   "couldNotVerify": "A real Pipedrive export file; column names were taken from Pipedrive's standard export headers."
+  },
+  {
+   "cycle": 8,
+   "start": "2:10pm ET",
+   "end": "2:40pm ET",
+   "shipped": [
+    {
+     "item": "History enriched from the full Pipedrive export",
+     "result": "Found the June 2026 115-column export on SharePoint and merged it: real stage names on 4,732 deals, 2,280 contacts, 1,801 lost reasons, 498 lead comments, 133 labor estimates, service addresses, verticals, project start dates and last-stage-change dates.",
+     "businessReason": "The board now reflects stages the reps set themselves, and lost-reason and velocity analytics have history behind them from day one.",
+     "verdict": "met (June snapshot; deals created since need a fresh export)"
+    },
+    {
+     "item": "All brand logos",
+     "result": "Nine logos fetched from SharePoint, compressed and rendered on proposal covers.",
+     "businessReason": "Proposals look like the brand, not a template.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "All eight test suites against the enriched data, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 9,
+   "start": "2:40pm ET",
+   "end": "2:55pm ET",
+   "shipped": [
+    {
+     "item": "Verticals, lost-reason history, rep permissions, AI tools",
+     "result": "Win rate and PM pull-through by vertical market; 1,800 historical lost reasons by brand; sales reps confined to their own deals; assistant can answer lost-reason and vertical questions.",
+     "businessReason": "Points BD at the verticals where the flywheel already turns and names why bids are lost (price too high, no response, competitor are the top three at Cortez).",
+     "verdict": "met"
+    }
+   ],
+   "verification": "All suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 10,
+   "start": "2:55pm ET",
+   "end": "3:25pm ET",
+   "shipped": [
+    {
+     "item": "Import-trust pass (P26, P33)",
+     "result": "Stage conflicts resolved toward the reps' October probabilities and flagged; impossible GM values dropped; velocity no longer counts snapshot age; paused and outlier deals parked off the board.",
+     "businessReason": "A GM who catches one wrong number stops trusting all of them.",
+     "verdict": "met"
+    },
+    {
+     "item": "Canonical lost reasons (P27)",
+     "result": "Eight buckets with top reps per bucket; price now shows as a near tie for second; no-response losses name the reps.",
+     "businessReason": "Turns 1,800 free-text losses into a Monday coaching list.",
+     "verdict": "met"
+    },
+    {
+     "item": "Labor hours to GPMD (P28) and proposal age (P29)",
+     "result": "One click prices a Pipedrive-estimated bid against the brand floor; proposal-to-close medians per brand with a stuck list of open proposals past 2x.",
+     "businessReason": "Real numbers through the GPMD floor today, and a follow-up cadence per brand.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test9.js (27 assertions) plus all prior suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 11,
+   "start": "3:25pm ET",
+   "end": "3:45pm ET",
+   "shipped": [
+    {
+     "item": "P31 Parent-account roll-up and cross-brand list",
+     "result": "Confirm Pipedrive parent hints, roll children up on the parent page and in Analytics, see which accounts buy from more than one brand and which big single-brand customers are the cross-sell list.",
+     "businessReason": "Enterprise reporting across brands starts here; 56 multi-brand accounts prove the platform thesis and the single-brand list is the BD call sheet.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test10.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 12,
+   "start": "3:45pm ET",
+   "end": "4:10pm ET",
+   "shipped": [
+    {
+     "item": "PM renewal pipeline (P34)",
+     "result": "41 agreements renew in the next 120 days; one click opens the renewal deal at the prior value and links it back.",
+     "businessReason": "Renewals stop slipping silently; the PM base compounds instead of churning.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test11.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 13,
+   "start": "4:10pm ET",
+   "end": "4:40pm ET",
+   "shipped": [
+    {
+     "item": "Fourth-review fixes (P51)",
+     "result": "Proposal medians use all 1,250 wins and are marked approximate; the stuck list fell from 189 to 52 real stuck proposals; multi-brand means bought from two brands (28, not 56); lost reasons re-bucketed with a data-cleanup bucket excluded from win rates; parent roll-ups recursive, loop-proof and fast.",
+     "businessReason": "Three numbers that would have been quoted upward were corrected before anyone quoted them.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test12.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 14,
+   "start": "4:40pm ET",
+   "end": "5:10pm ET",
+   "shipped": [
+    {
+     "item": "P35 weekly snapshots + P36 import stamps and indexes",
+     "result": "A pipeline snapshot is recorded every week automatically; trends and week-over-week movement now work for imported deals too; importer carries stage-change, bid-due and proposal dates; renders stay under 60 ms at 7,034 deals.",
+     "businessReason": "The CEO's trend line survives the cutover and the Monday deltas stop depending on go-live timestamps.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test13.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 15,
+   "start": "5:10pm ET",
+   "end": "5:40pm ET",
+   "shipped": [
+    {
+     "item": "P37 commit/best-case forecast + P39 bid calendar",
+     "result": "Reps mark deals commit, best case or omit; the Forecast tab and the CEO brief show commit vs plan by rep for this month and next; bid due dates drive a Home card and list sort.",
+     "businessReason": "The CRO's Monday call runs on a number a rep will stand behind, and estimators see what is due this week.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test14.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": "16\u201317",
+   "start": "5:40pm ET",
+   "end": "6:30pm ET",
+   "shipped": [
+    {
+     "item": "Brand specificity (CEO direction)",
+     "result": "Each brand's palette is its own named tokens from the brand skills and standards, with fonts and source; Setup shows them by name and hex; proposals use the tokens.",
+     "businessReason": "Proposals and the brand setup read like the brand guides, not a template.",
+     "verdict": "met (Freije exact hex pending)"
+    },
+    {
+     "item": "Rep cards (CEO direction)",
+     "result": "Click any rep name to see their open bids with GPMD verdicts, won and lost this year, plan attainment, commit and activity.",
+     "businessReason": "One click from any report to the conversation with the rep.",
+     "verdict": "met"
+    },
+    {
+     "item": "P40 GM sign-off and P38 forecast accuracy",
+     "result": "Below-floor bids cannot be sent by a rep without a brand manager's name and reason; commit at month start is scored against bookings.",
+     "businessReason": "GPMD becomes culture at the point of sending; commit discipline gets a scoreboard.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test15.js, test16.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 18,
+   "start": "6:30pm ET",
+   "end": "6:50pm ET",
+   "shipped": [
+    {
+     "item": "P43 data-quality dashboard + P41 real cost lines",
+     "result": "Quality score per rep with every gap one click from its deals; Pipedrive-hour quotes open as real cost lines with the estimator named.",
+     "businessReason": "GMs can see what is missing and who owns it; estimators get an editable estimate, not a one-line lot.",
+     "verdict": "met"
+    }
+   ],
+   "verification": "tools/test17.js plus all suites, zero console errors.",
+   "couldNotVerify": "Live page."
+  },
+  {
+   "cycle": 19,
+   "start": "2:20pm ET",
+   "end": "2:33pm ET",
+   "shipped": [
+    {
+     "item": "Live-data snapshot in the published artifact",
+     "result": "All shared collections exported to data/live.json and published beside the page; loaded whenever the shared database is unavailable, with local edits layered on top. Nightly build republishes it.",
+     "businessReason": "CEO asked that the data be there when the site is visited directly; without it a direct visit showed only history, not live deals, quotes or users.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 20,
+   "start": "2:33pm ET",
+   "end": "2:40pm ET",
+   "shipped": [
+    {
+     "item": "Won-deal handoff to ServiceTitan / Intacct (P44)",
+     "result": "Won deals carry a job-system entry (system, job number, date, who); Home shows 'Won, not in ServiceTitan' for management with a pending list; Setup \u203a Data exports a single CSV for the ServiceTitan job build and Intacct project setup.",
+     "businessReason": "Won work must land in the job and accounting systems without retyping; the pending count is the control that nothing sold goes unbilled.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 21,
+   "start": "2:40pm ET",
+   "end": "2:46pm ET",
+   "shipped": [
+    {
+     "item": "Email-to-deal logging (P45)",
+     "result": "Paste an email on a deal: sender, date, subject and body are read, the quoted thread is stripped, the customer contact is matched or created, the deal contact is set, and the email is logged as activity with an optional next action and task.",
+     "businessReason": "Half of selling happens in email; without it the weekly activity count and last-touch dates understate real work and the going-cold list lies.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 22,
+   "start": "2:46pm ET",
+   "end": "2:52pm ET",
+   "shipped": [
+    {
+     "item": "Performance at 7,000+ deals (P46)",
+     "result": "Long tables page at 200 rows with a 'Show more' control; the PM-base and cross-sell tabs use the per-account index. PM tab render fell from 362 ms to 11 ms; every view renders under 60 ms at phone width.",
+     "businessReason": "Reps on phones feel every full-table render; as history grows past 10,000 deals the app must stay instant or they drift back to Pipedrive.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 23,
+   "start": "2:52pm ET",
+   "end": "3:02pm ET",
+   "shipped": [
+    {
+     "item": "Rep onboarding tour and training mode (P47)",
+     "result": "A seven-step tour teaches the daily routine and stamps the rep as onboarded (visible in Team). Training mode gives each rep three practice deals that count toward nothing and can be reset.",
+     "businessReason": "Leaving Pipedrive is a habit change; a guided first session and a safe sandbox beat a manual and protect the real numbers from practice entries.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 24,
+   "start": "3:02pm ET",
+   "end": "3:12pm ET",
+   "shipped": [
+    {
+     "item": "Accessibility pass, WCAG 2.1 AA (P48)",
+     "result": "Zero serious or critical axe-core findings on every main view in light and dark at desktop and phone width. Contrast fixed in both themes and on every brand's proposal cover; keyboard users can move a stage, open rows and close dialogs; screen readers get labelled controls and live toasts.",
+     "businessReason": "Estimators on keyboards and reps on dark-mode phones must read every pill and move a stage; accessibility defects are adoption defects.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 25,
+   "start": "3:00pm ET",
+   "end": "3:08pm ET",
+   "shipped": [
+    {
+     "item": "Pipedrive font styling and icons (P61)",
+     "result": "Source Sans 3 UI face at Pipedrive's conventions (14 px base, semibold headings, sentence-case pills), thin rounded line icons on nav and main actions. Brand fonts in proposals unchanged.",
+     "businessReason": "Reps leaving Pipedrive should feel at home on the first morning; familiarity is adoption.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 26,
+   "start": "3:08pm ET",
+   "end": "3:20pm ET",
+   "shipped": [
+    {
+     "item": "Hosted web app package with Microsoft sign-in (P60)",
+     "result": "deploy/azure-swa: Azure Static Web Apps + Entra ID locked to the FSP tenant, Functions API over Cosmos DB, AI proxy with the key server-side, a shim so the identical page runs there, mock server and end-to-end test (owner, sales matched by name and linked, guest viewer). Runbook written; needs an Azure subscription owner to run infra/deploy.sh and add one DNS record.",
+     "businessReason": "A real domain behind the Microsoft login staff already use is the precondition for pointing 74 reps at SalesDesk.",
+     "verdict": "built, awaiting deploy"
+    },
+    {
+     "item": "Rollout-safe permissions, part 1 (P55)",
+     "result": "A refused write to an admin collection no longer flips a rep's session to view-only; non-admins record a sign-in with the matched rep instead of writing the roster. Verified against the hosted API as a sales rep.",
+     "businessReason": "As written, every rep's first sign-in would have made them read-only; found by the PM review, confirmed by the web test.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 27,
+   "start": "3:20pm ET",
+   "end": "3:25pm ET",
+   "shipped": [
+    {
+     "item": "Second PM and sales-agent review",
+     "result": "Six verified defects and thirteen new backlog items (P54\u2013P66) with acceptance criteria; P49 map retired.",
+     "businessReason": "Keeps the nightly Opus runs pointed at money-trust defects (forecast scope, outliers, permissions) before features.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 28,
+   "start": "3:11pm ET",
+   "end": "3:22pm ET",
+   "shipped": [
+    {
+     "item": "Scope-consistent forecast and brief (P54)",
+     "result": "With a brand filter, as a brand manager or as a rep, the Forecast tab and the CEO brief now show only that scope's plan and reps; plan placeholders no longer appear as people.",
+     "businessReason": "A GM reading the platform plan as his gap, or a rep seeing every other rep's plan, is the fastest way to lose trust in the forecast.",
+     "verdict": "met"
+    },
+    {
+     "item": "One outlier guard everywhere (P56)",
+     "result": "The $6.2B Weber data-entry outlier no longer tops Accounts or inflates an account header or Team counts; 'Last touch' now comes from activity.",
+     "businessReason": "One absurd number at the top of a list discredits every correct number below it.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 29,
+   "start": "3:32pm ET",
+   "end": "3:38pm ET",
+   "shipped": [
+    {
+     "item": "Rollout-safe permissions, part 2 (P55)",
+     "result": "Every deal-changing path (quick log, quote, renewal, handoff) is gated to the rep's own deals; the assistant and rep cards only see the user's scope.",
+     "businessReason": "Reps editing each other's deals, or pulling another brand's pipeline through the assistant, would end the pilot on day one.",
+     "verdict": "met"
+    },
+    {
+     "item": "Forecast weighting basis (P62)",
+     "result": "Admins choose imported Pipedrive probability or stage-weighted; every weighted number states which basis it uses and how many deals still carry an imported probability.",
+     "businessReason": "The board number must say what it is made of; today 880 open deals are weighted by a probability Pipedrive set in October.",
+     "verdict": "met"
+    },
+    {
+     "item": "GPMD floors per brand (P65)",
+     "result": "Quotes warns which brands still run on the platform default floor; verdicts are labelled until the brand sets its own overhead and labor cost.",
+     "businessReason": "A chase/reprice/pass verdict against a borrowed floor is fiction; the label makes the gap visible to the GM who must close it.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 30,
+   "start": "3:38pm ET",
+   "end": "3:41pm ET",
+   "shipped": [
+    {
+     "item": "Close-date slip history (P63)",
+     "result": "Every close-date push is recorded on the deal and surfaced: a Slipped row and list on This week, a stat and sentence in the CEO brief, and a per-rep slip count on Forecast.",
+     "businessReason": "Sandbagging and optimism both show up as slips; until they were recorded, a rep could move a $500K close three times with no trace.",
+     "verdict": "met"
+    },
+    {
+     "item": "Brand forecast roll-up with week-over-week delta (P57)",
+     "result": "Forecast opens with a by-brand table (won, commit, change in commit since last week's snapshot, best, weighted, plan, gap) whose platform total ties to the rep rows.",
+     "businessReason": "The CRO runs Friday by brand; nine rows with a delta replace sixty rep rows and a spreadsheet.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 31,
+   "start": "3:41pm ET",
+   "end": "3:44pm ET",
+   "shipped": [
+    {
+     "item": "Proposal a hospital facilities director will accept (P64)",
+     "result": "Project proposals now carry an equipment schedule, a schedule and lead-time section, a warranty section and a freight line type; the download prints to PDF with the cover as page one.",
+     "businessReason": "Six-figure bids are judged on the schedule and the warranty page as much as the price; an .html with neither loses credibility before the number is read.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 32,
+   "start": "3:44pm ET",
+   "end": "3:47pm ET",
+   "shipped": [
+    {
+     "item": "Two-step quick log and phone line cards (P66)",
+     "result": "On a phone the log shows four fields, with stage, close and forecast one tap away; quote lines become readable cards.",
+     "businessReason": "Ten seconds to log a call is the adoption promise; seven fields on a 400-pixel screen breaks it.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 33,
+   "start": "3:47pm ET",
+   "end": "3:54pm ET",
+   "shipped": [
+    {
+     "item": "Pipedrive parity check (P58)",
+     "result": "Setup \u203a Data reconciles SalesDesk against the source export or last import by brand and flags any brand off by more than 1%.",
+     "businessReason": "Cutover without a reconciliation is a leap of faith; this is the one table that proves no number was lost leaving Pipedrive.",
+     "verdict": "met"
+    },
+    {
+     "item": "Proposal rebuilt as a real document (P67, CEO direction)",
+     "result": "Letterhead, numbered sections, existing conditions, equipment schedule, alternates priced against base, payment, schedule, warranty and a full acceptance block; prints to a clean letter PDF in every brand.",
+     "businessReason": "Six-figure bids are won or lost on the document a facilities director forwards to their boss; it now looks like the brand's own proposal, not a web page.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 34,
+   "start": "3:54pm ET",
+   "end": "4:01pm ET",
+   "shipped": [
+    {
+     "item": "Email from the deal and inbox sync (P68, CEO direction)",
+     "result": "Reps send from their own Outlook with the deal tag in the subject and pull tagged or contact emails into the deal with one click; everything is logged as activity and moves last touch.",
+     "businessReason": "Half of selling is email; without it the activity record and the going-cold list were fiction, and reps kept Outlook as the system of record.",
+     "verdict": "met on claude.ai; hosted build follows via Microsoft Graph (P70)"
+    },
+    {
+     "item": "Estimator spreadsheet import (P69, CEO direction)",
+     "result": "Drop or paste an estimate; SalesDesk maps the columns, types the lines, converts labor hours to man-days and creates the quote with a GPMD verdict.",
+     "businessReason": "Estimators price in Excel; a quote they do not have to retype is the only way GPMD gets recorded on every bid.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 35,
+   "start": "4:01pm ET",
+   "end": "4:09pm ET",
+   "shipped": [
+    {
+     "item": "Proposal pass two (P72, from a facilities-director critique)",
+     "result": "Cover letter, equipment data schedule (make, model, tons, efficiency, electrical), tax and totals per option, permit/tax/bond clarifications, milestone schedule, warranty by component, qualifications, insurance and references from a per-brand Proposal profile.",
+     "businessReason": "These are the sections a hospital CFO reads before the price; national competitors ship them on every bid and FSP's brands now match them without retyping.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 36,
+   "start": "4:09pm ET",
+   "end": "4:13pm ET",
+   "shipped": [
+    {
+     "item": "Hosted build: email through Microsoft Graph (P70)",
+     "result": "The Azure version sends from the rep's mailbox and syncs the inbox through Graph application permissions, restricted to sales mailboxes by an Exchange access policy; the page code is identical.",
+     "businessReason": "Email on the deal cannot be a claude.ai-only feature if the rollout is on the FSP domain.",
+     "verdict": "met in the mock; needs admin consent at deploy"
+    }
+   ]
+  },
+  {
+   "cycle": 37,
+   "start": "4:13pm ET",
+   "end": "4:16pm ET",
+   "shipped": [
+    {
+     "item": "GM month-end pack (P59)",
+     "result": "One copyable pack per brand: orders vs plan, commit to close, bids below floor and who approved them, renewals, stuck proposals, slips and data quality, all tied to the live cards.",
+     "businessReason": "Without it every GM rebuilds the month in Excel from Pipedrive; with it the platform reads nine packs written the same way.",
+     "verdict": "met"
+    }
+   ]
+  },
+  {
+   "cycle": 38,
+   "start": "4:29pm ET",
+   "end": "4:36pm ET",
+   "shipped": [
+    {
+     "item": "Shared intake mailboxes (P71)",
+     "result": "Each brand can set a sales@ mailbox that reps cc; one click files those emails onto deals by tag or contact and queues the rest for review.",
+     "businessReason": "Customer email that never touches a rep's mailbox (shared sales@ addresses) now reaches the opportunity too, so the deal record is complete without asking anyone to forward.",
+     "verdict": "met"
+    }
+   ]
+  }
+ ],
+ "openQuestions": [
+  "Email scope is not available on this account, so role matching uses display name until users are linked on first sign-in.",
+  "Pipedrive stage names, notes, contacts and activities were not in the export; a fuller export would let P1 recover them.",
+  "Who owns the Azure subscription and DNS for salesdesk.flowservice.com? deploy/azure-swa/README.md is the 30-minute runbook.",
+  "Fresh Pipedrive People export with phones and e-mails (P50): tap-to-call is dead without it."
+ ],
+ "updatedAt": "2026-10-30T20:32:44.329694+00:00",
+ "backlogTop5": [
+  "Night 1 (tonight): forecast accuracy from snapshots (P38), GM sign-off for below-floor bids (P40)",
+  "Night 2: real cost lines from hours (P41), data-quality dashboard (P43)",
+  "Night 3: ServiceTitan handoff export (P44), email logging (P45)",
+  "Night 4\u20135: performance, onboarding, accessibility",
+  "Needs you: fresh Pipedrive export (Deals, Notes, People, Activities)"
+ ],
+ "recommendation": "Run a fresh Pipedrive export (Deals, Notes, People, Activities, CSV, all fields) and drop it into Setup \u203a Data to cover deals created since June and the notes history; then have one R. Brooks estimator price a live bid in SalesDesk on Monday.",
+ "strategicObservation": "The loss and labor history is the new asset: since FY2025 the platform lost 388 deals to no response (two R. Brooks reps account for half), price effectively ties competitor for second, Dynamic closes 14 days after a proposal while Altstadt takes 106, and 40 open Cortez bids carry estimated hours that can run through the GPMD floor today. GPMD discipline becomes platform culture only if SalesDesk is the estimating system of record first and the CRM second; the item that still needs the CEO is a fresh Pipedrive export (Deals, Notes, People, Activities): 647 open deals created since June have none of this detail, and every contact imported so far is a name without a phone number."
+}
