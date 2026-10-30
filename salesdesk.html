@@ -43,6 +43,7 @@ nav.rail a:hover{color:#fff}
 .ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px;flex:0 0 auto}
 .btn .ico{margin-right:4px} nav.rail .ico{width:18px;height:18px;flex:0 0 18px}
 nav.rail .spacer{flex:1}
+.theme{display:flex;gap:4px;padding:0 20px 10px} .theme button{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--rail-fg);border-radius:var(--r);padding:4px 0;font-size:11px;font-weight:600;cursor:pointer} .theme button.on{background:rgba(255,255,255,.16);color:#fff}
 .me{padding:14px 20px;font-size:12px;border-top:1px solid rgba(255,255,255,.1)}
 .me b{display:block;color:#fff}
 .pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0;line-height:1.3;padding:1px 8px;border-radius:10px;background:var(--soft);color:var(--muted);vertical-align:middle}
@@ -183,7 +184,7 @@ small.hint{display:block;color:var(--muted);font-style:italic;margin-top:6px}
 <script>
 /* ===================== FSP SalesDesk — core ===================== */
 'use strict';
-const APP_VERSION='0.37.0';
+const APP_VERSION='0.38.0';
 const STAGES=[
   {id:'lead',name:'Lead',p:.10},{id:'qualified',name:'Qualified',p:.25},{id:'quoted',name:'Quoted',p:.45},
   {id:'proposal',name:'Proposal',p:.60},{id:'verbal',name:'Verbal / Pending',p:.80}];
@@ -412,7 +413,7 @@ function render(){
   const visible=NAV.filter(n=>!(n[0]==='setup'&&!canAdmin())&&!(n[0]==='team'&&!isMgmt()));
   $('#rail').innerHTML=`<div class="brandmark"><div class="wm">FSP <em>SalesDesk</em></div><div class="sub">Sales operating system</div></div>`+
     visible.map(n=>`<a href="#${n[0]}" class="${S.view===n[0]||(S.view==='deal'&&n[0]==='pipeline')||(S.view==='account'&&n[0]==='accounts')||((S.view==='quote'||S.view==='proposal')&&n[0]==='quotes')?'on':''}">${ico(n[2])}${n[1]}</a>`).join('')+
-    `<div class="spacer"></div><div class="me"><b>${esc(S.me.name||(S.mode==='db'?'Signed in':'Local preview'))}</b>${esc(roleLabel())}${S.mode==='db'?'':` · <span title="${S.liveSnapshot?'Showing the shared data as published '+esc((S.liveSnapshot.exportedAt||'').slice(0,16).replace('T',' '))+' UTC; edits made here stay in this browser until opened inside claude.ai':'Data stays in this browser'}">${S.liveSnapshot?'snapshot '+esc((S.liveSnapshot.exportedAt||'').slice(5,10)):'local mode'}</span>`}</div>`;
+    `<div class="spacer"></div><div class="theme" role="group" aria-label="Theme">${[['light','Light'],['dark','Dark'],['system','Auto']].map(([k,l])=>`<button class="${themePref()===k?'on':''}" data-act="setTheme" data-theme="${k}" aria-pressed="${themePref()===k}">${l}</button>`).join('')}</div><div class="me"><b>${esc(S.me.name||(S.mode==='db'?'Signed in':'Local preview'))}</b>${esc(roleLabel())}${S.mode==='db'?'':` · <span title="${S.liveSnapshot?'Showing the shared data as published '+esc((S.liveSnapshot.exportedAt||'').slice(0,16).replace('T',' '))+' UTC; edits made here stay in this browser until opened inside claude.ai':'Data stays in this browser'}">${S.liveSnapshot?'snapshot '+esc((S.liveSnapshot.exportedAt||'').slice(5,10)):'local mode'}</span>`}</div>`;
   const more=visible.filter(n=>!MOBILE_NAV.includes(n[0]));
   $('#tabbar').innerHTML=NAV.filter(n=>MOBILE_NAV.includes(n[0])).map(n=>`<a href="#${n[0]}" class="${S.view===n[0]?'on':''}">${ico(n[2])}${n[1]}</a>`).join('')+(more.length?`<a href="#" data-act="moreNav" class="${more.some(n=>n[0]===S.view)?'on':''}">${ico('M4 7h16 M4 12h16 M4 17h16')}More</a>`:'');
   const V={home:viewHome,pipeline:viewPipeline,accounts:viewAccounts,quotes:viewQuotes,plan:viewPlan,analytics:viewAnalytics,team:viewTeam,assistant:viewAssistant,setup:viewSetup,deal:viewDeal,account:viewAccount,quote:viewQuote,proposal:viewProposal};
@@ -421,6 +422,9 @@ function render(){
 }
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&$('#modal')){ closeModal(); return } if(e.key!=='Enter'&&e.key!==' ')return; const el=e.target; if(!el||['INPUT','TEXTAREA','SELECT','BUTTON','A'].includes(el.tagName))return; if(el.matches('[data-act],[data-go],[data-tab]')){ e.preventDefault(); el.click() } });
 if(document.documentElement&&!document.documentElement.lang)document.documentElement.lang='en';
+function themePref(){ try{return localStorage.getItem('sd_theme')||'light'}catch(e){return 'light'} }
+function applyTheme(){ const t=themePref(); const el=document.documentElement; if(t==='system')el.removeAttribute('data-theme'); else el.setAttribute('data-theme',t) }
+applyTheme();
 function roleLabel(){ return {owner:'Owner',admin:'Admin',platform:'Platform management',brandmgr:'Brand management',sales:'Sales',viewer:'Viewer'}[S.role]||S.role }
 function wire(){
   $$('[data-go]').forEach(el=>el.onclick=e=>{e.preventDefault();const [v,k,id]=el.dataset.go.split(':');go(v,k?{[k]:id}:null)});
@@ -1322,6 +1326,7 @@ const ACTIONS=window.ACTIONS={
   async saveTask(d){ const v=formVals($('#tf')); if(!v.title)return; closeModal(); await addTask(d.id,v.title,v.due); render() },
   async doneTask(d){ await completeTask(d.id); render() },
   moreNav(){ const visible=NAV.filter(n=>!(n[0]==='setup'&&!canAdmin())&&!(n[0]==='team'&&!isMgmt())&&!MOBILE_NAV.includes(n[0])); modal(`<header><h2>More</h2><button class="btn s" data-act="close">✕</button></header><div class="grid g2">${visible.map(n=>`<a href="#${n[0]}" class="btn" style="display:flex;gap:10px;align-items:center;justify-content:flex-start;padding:14px" onclick="closeModal()">${ico(n[2])}${n[1]}</a>`).join('')}</div>`) },
+  setTheme(d){ try{localStorage.setItem('sd_theme',d.theme)}catch(e){} applyTheme(); render() },
   showLate(){S.ui.anaTab='aging';go('analytics')},
   startTour(){ S._tour=0; ACTIONS.tourStep({i:0}) },
   tourStep(d){ const i=+d.i; if(i>=TOUR.length)return ACTIONS.finishTour(); const st=TOUR[i]; S._tour=i; modal(`<header><h2>${esc(st.t)}</h2><button class="btn s" data-act="close">✕</button></header><div class="muted" style="margin-bottom:6px">Step ${i+1} of ${TOUR.length}</div><p>${st.b}</p><div class="chips" style="margin:8px 0">${TOUR.map((x,j)=>`<span class="chip ${j===i?'on':''}" data-act="tourStep" data-i="${j}" title="${esc(x.t)}">${j+1}</span>`).join('')}</div><div class="right" style="margin-top:12px">${S.view!==st.v?`<button class="btn s" data-act="tourGo" data-v="${st.v}" data-i="${i}">Show me</button>`:''}${i>0?`<button class="btn s" data-act="tourStep" data-i="${i-1}">Back</button>`:''}<button class="btn p" data-act="tourStep" data-i="${i+1}">${i===TOUR.length-1?'Finish':'Next'}</button></div>`) },
@@ -1756,4 +1761,9 @@ multi-line cells; email addresses accept "Name <addr>" and de-duplicate To/Cc, s
 contact's given name ("Smith, John" → John), inbox sync de-duplicates per deal and files tagged mail only to its tagged deal; a cleared permit
 fee stays cleared; the brand profile license wins on letterhead; qualifications print when only bonding is filled; maintenance proposals omit
 project clarifications and show long-form agreement dates. tools/test33.js.
+2026-10-30 · v0.38.0 · Day 1 cycle 40 (Fable)
+Theme: light is the default on every surface (CEO: white/off-white, not dark); a Light / Dark / Auto switch in the sidebar stores the choice
+per browser (sd_theme); the hosted build sets data-theme="light" on the document. Hosted deploy: deploy.sh is resumable (reuses Cosmos,
+Static Web App and app registration; Graph sign-in hint) and publish.sh builds, deploys through the SWA CLI and seeds the data.
+First production deploy to Azure Static Web Apps completed today by the CEO from Cloud Shell.
 -->

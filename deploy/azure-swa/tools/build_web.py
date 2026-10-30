@@ -9,7 +9,7 @@ window.claude.use() resolves against the SalesDesk API instead of returning null
 """
 import os, re, shutil, sys
 
-SKELETON_HEAD = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+SKELETON_HEAD = ('<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8">'
                  '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
                  '<meta name="color-scheme" content="light dark">'
                  '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}'

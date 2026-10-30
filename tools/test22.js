@@ -6,7 +6,7 @@ const axe=fs.existsSync(axePath)?fs.readFileSync(axePath,'utf8'):null;
   const b=await chromium.launch(); const errs=[]; const out={axe:{}};
   for(const [w,scheme] of [[1400,'light'],[400,'dark']]){ const ctx=await b.newContext({viewport:{width:w,height:900},colorScheme:scheme}); const p=await ctx.newPage();
     p.on('console',m=>{if(m.type()==='error')errs.push('console: '+m.text())}); p.on('pageerror',e=>errs.push('pageerror: '+e.message));
-    await p.goto(base+'#home'); await p.evaluate(()=>localStorage.clear()); await p.reload(); await p.waitForFunction(()=>window.S&&S.loaded&&S.deals.length>1000);
+    await p.goto(base+'#home'); await p.evaluate((sch)=>{localStorage.clear(); localStorage.setItem('sd_theme',sch)},scheme); await p.reload(); await p.waitForFunction(()=>window.S&&S.loaded&&S.deals.length>1000);
     if(axe){ await p.addScriptTag({content:axe});
       for(const v of ['home','pipeline','deal','quote','proposal']){ const r=await p.evaluate(async(v)=>{ if(v==='deal'){S.sel.deal=S.deals.find(x=>x.status==='open'&&x.value>5000&&x.value<5e7).id} if(v==='quote'){S.sel.quote=Object.values(S.live.quotes)[0].id} if(v==='proposal'){S.sel.proposal=Object.values(S.live.proposals)[0].id} if(v==='pipeline')S.ui.pipeTab='board'; S.view=v; render(); await new Promise(r=>setTimeout(r,80)); const res=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}); return res.violations.filter(x=>x.impact==='serious'||x.impact==='critical').map(x=>x.id+':'+x.nodes.length) },v); out.axe[`${v}@${w}/${scheme}`]=r } }
     if(w===400){ const r=await p.evaluate(async()=>{ const o={}; const t=s=>new Promise(r=>setTimeout(r,s));
