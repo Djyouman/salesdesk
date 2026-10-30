@@ -33,7 +33,7 @@ Total Sell\t\t\t\t$112,500`;
     out.activity=Object.values(S.live.activities).some(a=>a.dealId===d.id&&a.type==='quote'&&a.text.includes('Estimate imported'));
     // CSV path with a different header vocabulary
     const csv=['Item,Category,Quantity,Rate,Amount','"Chiller, air-cooled 150 ton",Equipment,1,165000,165000','Controls integration,Sub,1,12000,12000','Labor hours,Labor,320,,','TOTAL,,,,250000'].join('\n');
-    const r2=parseDelimited(csv); const h2=estFindHeader(r2); const m2=estGuessCols(r2[h2]); const p2=estParse(r2,h2,m2); out.csvLines=p2.lines.length===2&&p2.lines[0].type==='equipment'&&p2.lines[1].type==='sub'; out.csvHours=p2.hours===320; out.csvSell=p2.sell===250000;
+    const r2=parseDelimited(csv); const h2=estFindHeader(r2); const m2=estGuessCols(r2[h2]); const p2=estParse(r2,h2,m2); out.csvLines=p2.lines.length===2&&p2.lines[0].type==='equipment'&&p2.lines[1].type==='sub'; out.csvHours=p2.hours===320; out.csvSell=p2.sell==null && p2.skipped.length===1;
     out.ov=document.documentElement.scrollWidth-document.documentElement.clientWidth; return out;
   },TSV);
   console.log(JSON.stringify(r,null,1)); await b.close(); console.log('ERRORS',errs.length); errs.forEach(e=>console.log(' -',e));
