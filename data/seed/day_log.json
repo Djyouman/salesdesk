@@ -733,6 +733,19 @@
      "verdict": "met"
     }
    ]
+  },
+  {
+   "cycle": 39,
+   "start": "4:36pm ET",
+   "end": "4:52pm ET",
+   "shipped": [
+    {
+     "item": "Defect round on import, email and proposal (ten verified by the PM)",
+     "result": "Column mapping, total-row and labor detection, sell-price source, duplicate-title deal picker, quoted cells, address parsing, per-deal email dedupe, cleared fields and license precedence all fixed with tests.",
+     "businessReason": "An importer that drops a $4,200 sump pump line or books a cost total as the bid price understates cost and overstates GPMD; these were the paths most likely to mislead a GM on day one of use.",
+     "verdict": "met"
+    }
+   ]
   }
  ],
  "openQuestions": [
@@ -741,7 +754,7 @@
   "Who owns the Azure subscription and DNS for salesdesk.flowservice.com? deploy/azure-swa/README.md is the 30-minute runbook.",
   "Fresh Pipedrive People export with phones and e-mails (P50): tap-to-call is dead without it."
  ],
- "updatedAt": "2026-10-30T20:32:44.329694+00:00",
+ "updatedAt": "2026-10-30T20:38:16.039569+00:00",
  "backlogTop5": [
   "Night 1 (tonight): forecast accuracy from snapshots (P38), GM sign-off for below-floor bids (P40)",
   "Night 2: real cost lines from hours (P41), data-quality dashboard (P43)",
