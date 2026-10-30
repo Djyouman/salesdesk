@@ -16,6 +16,12 @@ set -euo pipefail
 TENANT_ID=$(az account show --query tenantId -o tsv)
 echo "Tenant $TENANT_ID · resource group $RG · region $LOC"
 
+# 0. A new subscription must register the services it will use (one-time, a few minutes, idempotent)
+for ns in Microsoft.DocumentDB Microsoft.Web Microsoft.Storage; do
+  state=$(az provider show -n "$ns" --query registrationState -o tsv 2>/dev/null || echo "NotRegistered")
+  if [ "$state" != "Registered" ]; then echo "Registering $ns…"; az provider register --namespace "$ns" --wait -o none; fi
+done
+
 az group create -n "$RG" -l "$LOC" -o none
 
 # 1. Cosmos DB (NoSQL, serverless: pay per request, no idle cost; free tier if the subscription has none yet)
