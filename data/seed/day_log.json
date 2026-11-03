@@ -2,7 +2,7 @@
  "id": "day-2026-10-30",
  "date": "2026-10-30",
  "runner": "Fable (day 1, owner session)",
- "headline": "SalesDesk v0.35.0: 37 cycles on day one \u2014 roadmap, Pipedrive-style UI, hosted Microsoft-login build with Graph email, Outlook email on every deal, estimator import, a facilities-director proposal and the GM month-end pack",
+ "headline": "SalesDesk day 1: 40 cycles, the hosted site is live on Azure behind Microsoft login, and the proposal, email and estimating workflows reps asked for are in",
  "cycles": [
   {
    "cycle": 1,
@@ -746,6 +746,19 @@
      "verdict": "met"
     }
    ]
+  },
+  {
+   "cycle": 40,
+   "start": "4:52pm ET",
+   "end": "7:40pm ET",
+   "shipped": [
+    {
+     "item": "Hosted site live on Azure (P60) and light theme default",
+     "result": "The CEO deployed FSP SalesDesk to Azure Static Web Apps from Cloud Shell behind Microsoft sign-in; data loaded; deploy scripts made resumable with a one-command publish; light theme default with a Light/Dark/Auto switch.",
+     "businessReason": "A real address behind the login staff already use is the precondition for the rep rollout; dark mode by default was the first thing the CEO noticed.",
+     "verdict": "met; custom domain, Anthropic key and Graph admin consent pending (owner actions)"
+    }
+   ]
   }
  ],
  "openQuestions": [
@@ -754,7 +767,7 @@
   "Who owns the Azure subscription and DNS for salesdesk.flowservice.com? deploy/azure-swa/README.md is the 30-minute runbook.",
   "Fresh Pipedrive People export with phones and e-mails (P50): tap-to-call is dead without it."
  ],
- "updatedAt": "2026-10-30T20:38:16.039569+00:00",
+ "updatedAt": "2026-10-30T23:48:09.256806+00:00",
  "backlogTop5": [
   "Night 1 (tonight): forecast accuracy from snapshots (P38), GM sign-off for below-floor bids (P40)",
   "Night 2: real cost lines from hours (P41), data-quality dashboard (P43)",
@@ -763,5 +776,21 @@
   "Needs you: fresh Pipedrive export (Deals, Notes, People, Activities)"
  ],
  "recommendation": "Run a fresh Pipedrive export (Deals, Notes, People, Activities, CSV, all fields) and drop it into Setup \u203a Data to cover deals created since June and the notes history; then have one R. Brooks estimator price a live bid in SalesDesk on Monday.",
- "strategicObservation": "The loss and labor history is the new asset: since FY2025 the platform lost 388 deals to no response (two R. Brooks reps account for half), price effectively ties competitor for second, Dynamic closes 14 days after a proposal while Altstadt takes 106, and 40 open Cortez bids carry estimated hours that can run through the GPMD floor today. GPMD discipline becomes platform culture only if SalesDesk is the estimating system of record first and the CRM second; the item that still needs the CEO is a fresh Pipedrive export (Deals, Notes, People, Activities): 647 open deals created since June have none of this detail, and every contact imported so far is a name without a phone number."
+ "strategicObservation": "The loss and labor history is the new asset: since FY2025 the platform lost 388 deals to no response (two R. Brooks reps account for half), price effectively ties competitor for second, Dynamic closes 14 days after a proposal while Altstadt takes 106, and 40 open Cortez bids carry estimated hours that can run through the GPMD floor today. GPMD discipline becomes platform culture only if SalesDesk is the estimating system of record first and the CRM second; the item that still needs the CEO is a fresh Pipedrive export (Deals, Notes, People, Activities): 647 open deals created since June have none of this detail, and every contact imported so far is a name without a phone number.",
+ "summary": {
+  "shipped": "40 build cycles from v0.1.0 to v0.38.0: the five-night roadmap in one day (snapshots, forecast commit/best, GM sign-off, data quality, ServiceTitan handoff, email logging, paging, tour and training mode, accessibility), Pipedrive-style UI, two proposal rebuilds to facilities-director standard, Outlook email in and out of every deal plus shared intake mailboxes, estimator spreadsheet import, GM month-end pack, Pipedrive parity check, slips and brand forecast roll-up, rollout-safe permissions, and the Azure hosted build the CEO deployed himself.",
+  "verified": "Every cycle had a headless Playwright acceptance test and the regression suites were green before each publish; axe-core reports zero serious or critical findings in light and dark at desktop and phone width; the Microsoft 365 search result shape was verified against the CEO's mailbox; the hosted build passed its end-to-end test for owner, rep and guest identities and sent/synced mail through the mock Graph.",
+  "couldNotVerify": "Real Outlook send from the artifact (needs the CEO to allow the connector once); Graph mail on Azure (needs admin consent and the Exchange access policy); the custom domain (DNS pending); the proposal in a real customer's hands.",
+  "notShipped": "Fresh Pipedrive People export (owner action; phones and emails are still missing on every contact); brand proposal profiles and GPMD floors (GM inputs); P49 map retired.",
+  "openQuestions": [
+   "Email scope is not available on this account, so role matching uses display name until users are linked on first sign-in.",
+   "Pipedrive stage names, notes, contacts and activities were not in the export; a fuller export would let P1 recover them.",
+   "Who owns the Azure subscription and DNS for salesdesk.flowservice.com? deploy/azure-swa/README.md is the 30-minute runbook.",
+   "Fresh Pipedrive People export with phones and e-mails (P50): tap-to-call is dead without it."
+  ],
+  "recommendation": "Point two or three reps at the hosted site next week with their own Microsoft login before any wider rollout; have each GM fill the brand GPMD floor and proposal profile first, because verdicts and proposals are only as good as those two inputs.",
+  "strategicObservation": "The asset that compounds is not the CRM screens, it is the GPMD record on every bid plus the proposal and email trail attached to it: that is the data no Pipedrive export ever held and the basis for pricing discipline across nine brands. Protect it by making SalesDesk the estimating system of record first; the activity CRM follows."
+ },
+ "finalVersion": "0.38.0",
+ "hostedUrl": "https://ambitious-flower-00160fa0f.3.azurestaticapps.net"
 }

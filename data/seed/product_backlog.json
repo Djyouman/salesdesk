@@ -1,7 +1,7 @@
 {
  "id": "backlog",
- "updatedAt": "2026-10-30T20:32:44.329694+00:00",
- "updatedBy": "Fable day loop (PM + sales review round 2)",
+ "updatedAt": "2026-10-30T23:48:09.256806+00:00",
+ "updatedBy": "Fable day 1 wind-down",
  "items": [
   {
    "id": "P13",
@@ -463,13 +463,14 @@
   {
    "id": "P60",
    "priority": 56,
-   "status": "built-awaiting-deploy",
+   "status": "done",
    "night": null,
    "title": "Hosted web app on an FSP domain with Microsoft sign-in",
    "why": "CEO direction: a real site to send people to, behind Microsoft login. Reps cannot be sent to a claude.ai artifact.",
    "acceptance": "deploy/azure-swa: Static Web App + Entra ID (tenant-locked) + Functions API + Cosmos DB; same page via shim; headless end-to-end green for owner, sales (name-matched, uid linked) and guest viewer; runbook in deploy/azure-swa/README.md. Owner action: run infra/deploy.sh, add DNS CNAME, push repo.",
    "effort": "L",
-   "source": "CEO 10-30"
+   "source": "CEO 10-30",
+   "verdict": "Deployed by the CEO from Azure Cloud Shell on 2026-10-30 (ambitious-flower-00160fa0f.3.azurestaticapps.net); custom domain salesdesk.flowservice.com pending DNS; Anthropic key pending; admin consent for Graph mail pending."
   },
   {
    "id": "P61",
@@ -605,6 +606,63 @@
    "why": "Facilities-director review: a CFO must see what is bought, what it costs all-in and why this contractor.",
    "acceptance": "Equipment fields on quote lines render as a data schedule; tax and totals per option; clarifications for permits/tax/bond; milestone table; warranty by component; brand profile drives qualifications/insurance/references; cover letter; all 10 brands render, prints to PDF.",
    "verdict": "met (cycle 35, test26.js); next: nameplate photos, dated schedule from acceptance date, e-signature"
+  },
+  {
+   "id": "P73",
+   "priority": 69,
+   "status": "ready",
+   "night": 1,
+   "title": "Custom domain and go-live checks for salesdesk.flowservice.com",
+   "why": "Reps are sent to a brand address, not an Azure hostname.",
+   "acceptance": "Owner action: DNS CNAME + hostname set; then verify sign-in, role resolution for a rep, email send/sync (after admin consent), and seed parity (Setup \u203a Data parity card all within 1%).",
+   "effort": "S",
+   "source": "CEO 10-30"
+  },
+  {
+   "id": "P74",
+   "priority": 70,
+   "status": "ready",
+   "night": 1,
+   "title": "Nightly build publishes to Azure too (GitHub Actions)",
+   "why": "Both surfaces must stay identical; the artifact alone is no longer the product.",
+   "acceptance": "Repo secrets AZURE_STATIC_WEB_APPS_API_TOKEN and AAD_TENANT_ID set (owner); nightly session commits to Djyouman/salesdesk main after publishing the artifact; workflow deploys; publish.sh documented as the manual fallback.",
+   "effort": "S",
+   "source": "Fable 10-30"
+  },
+  {
+   "id": "P75",
+   "priority": 71,
+   "status": "ready",
+   "night": 2,
+   "title": "Theme and brand polish on the hosted site",
+   "why": "CEO: white background, not dark; first impression for 74 reps.",
+   "acceptance": "Light default verified on the hosted site; brand accent per signed-in rep's brand on the rail; favicon and page title per brand.",
+   "effort": "S",
+   "source": "CEO 10-30"
+  },
+  {
+   "id": "P76",
+   "priority": 72,
+   "status": "ready",
+   "night": 2,
+   "title": "Sharing hygiene: artifact back to private once the hosted site is the entry point",
+   "why": "The artifact was set to anyone-with-link today and holds real customer data.",
+   "acceptance": "Owner action; app shows a banner to the owner when the artifact is public (user.can / listing not available in-page: document the check in PROGRAM.md instead).",
+   "effort": "S",
+   "source": "Fable 10-30"
   }
- ]
+ ],
+ "pmReview": {
+  "at": "2026-10-30T23:48:09.256806+00:00",
+  "by": "Fable day 1 wind-down",
+  "verdict": "Day 1 shipped 40 cycles: the whole five-night roadmap, Pipedrive-style UI, a facilities-director proposal, Outlook email on every deal, estimator import, GM pack, parity check, and a hosted Azure build behind Microsoft login that the CEO deployed himself. All headless suites green at the final run (test.js, test22 axe, test30, test33).",
+  "top5": [
+   "P73 custom domain and go-live checks (owner DNS + verification)",
+   "P74 nightly build deploys to Azure via GitHub Actions",
+   "P50 fresh Pipedrive People export with phones/emails (owner)",
+   "Brand proposal profiles filled by each GM (Setup \u203a Brands)",
+   "P75 hosted theme/brand polish; P76 artifact back to private"
+  ],
+  "recommendation": "Point two or three reps at the hosted site next week with their own Microsoft login before any wider rollout; have each GM fill the brand GPMD floor and proposal profile first, because verdicts and proposals are only as good as those two inputs."
+ }
 }
